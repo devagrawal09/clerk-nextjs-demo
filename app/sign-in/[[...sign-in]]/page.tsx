@@ -1,9 +1,7 @@
-import { SignIn } from "@clerk/nextjs";
-
 export default function Page() {
   return (
-    <div className="flex justify-center py-24">
-      <SignIn />
-    </div>
+    <>
+      <h2 className="text-3xl text-gray-900 dark:text-white">Sign In</h2>
+    </>
   );
 }
