@@ -8,9 +8,7 @@ export function AppHeader() {
         <Link href={"/"}>
           <h1 className="text-2xl font-bold">Next.js + Clerk</h1>
         </Link>
-        <div className="flex gap-4">
-          <UserButton afterSignOutUrl="/" />
-        </div>
+        <div className="flex gap-4">User</div>
       </div>
     </header>
   );
