@@ -16,9 +16,9 @@ export function NextjsDemoC(props: {
       </h2>
       <div className="w-full max-w-md mx-auto bg-white rounded-xl shadow-md dark:bg-gray-800">
         {props.todos.length ? (
-          <ul className="list-none space-y-4 p-4">
+          <ul className="list-none px-4">
             {props.todos.map((todo) => (
-              <li className="flex items-center border-b border-gray-200 dark:border-gray-700 py-3">
+              <li className="flex items-center border-b border-gray-200 dark:border-gray-700 py-6 last:border-none ">
                 <button className="text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-500 mr-3">
                   <svg
                     className=" h-5 w-5"
