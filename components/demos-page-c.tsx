@@ -3,41 +3,37 @@
  * @see https://v0.dev/t/robVxfqisew
  */
 import Link from "next/link";
+import { PropsWithChildren } from "react";
 
 export function DemosPageC() {
   return (
     <>
-      <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">
-        Choose your adventure
+      <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
+        Choose Your Adventure
       </h2>
+      <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
+        What would you like to see?
+      </p>
       <div className="grid grid-cols-3 gap-4 w-full">
         <Link href={"/demos/nextjs"}>
-          <section className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 flex flex-col items-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 ">
+          <DemoCard>
             <svg
-              className=" h-12 w-12 text-gray-700 dark:text-gray-300"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
+              className="h-10 w-10 m-4 text-blue-500 dark:text-blue-300"
+              viewBox=".5 -.2 1023 1024.1"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="m8 6 4-4 4 4" />
-              <path d="M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22" />
-              <path d="m20 22-5-5" />
+              <path d="m478.5.6c-2.2.2-9.2.9-15.5 1.4-145.3 13.1-281.4 91.5-367.6 212-48 67-78.7 143-90.3 223.5-4.1 28.1-4.6 36.4-4.6 74.5s.5 46.4 4.6 74.5c27.8 192.1 164.5 353.5 349.9 413.3 33.2 10.7 68.2 18 108 22.4 15.5 1.7 82.5 1.7 98 0 68.7-7.6 126.9-24.6 184.3-53.9 8.8-4.5 10.5-5.7 9.3-6.7-.8-.6-38.3-50.9-83.3-111.7l-81.8-110.5-102.5-151.7c-56.4-83.4-102.8-151.6-103.2-151.6-.4-.1-.8 67.3-1 149.6-.3 144.1-.4 149.9-2.2 153.3-2.6 4.9-4.6 6.9-8.8 9.1-3.2 1.6-6 1.9-21.1 1.9h-17.3l-4.6-2.9c-3-1.9-5.2-4.4-6.7-7.3l-2.1-4.5.2-200.5.3-200.6 3.1-3.9c1.6-2.1 5-4.8 7.4-6.1 4.1-2 5.7-2.2 23-2.2 20.4 0 23.8.8 29.1 6.6 1.5 1.6 57 85.2 123.4 185.9s157.2 238.2 201.8 305.7l81 122.7 4.1-2.7c36.3-23.6 74.7-57.2 105.1-92.2 64.7-74.3 106.4-164.9 120.4-261.5 4.1-28.1 4.6-36.4 4.6-74.5s-.5-46.4-4.6-74.5c-27.8-192.1-164.5-353.5-349.9-413.3-32.7-10.6-67.5-17.9-106.5-22.3-9.6-1-75.7-2.1-84-1.3zm209.4 309.4c4.8 2.4 8.7 7 10.1 11.8.8 2.6 1 58.2.8 183.5l-.3 179.8-31.7-48.6-31.8-48.6v-130.7c0-84.5.4-132 1-134.3 1.6-5.6 5.1-10 9.9-12.6 4.1-2.1 5.6-2.3 21.3-2.3 14.8 0 17.4.2 20.7 2z" />
+              <path d="m784.3 945.1c-3.5 2.2-4.6 3.7-1.5 2 2.2-1.3 5.8-4 5.2-4.1-.3 0-2 1-3.7 2.1zm-6.9 4.5c-1.8 1.4-1.8 1.5.4.4 1.2-.6 2.2-1.3 2.2-1.5 0-.8-.5-.6-2.6 1.1zm-5 3c-1.8 1.4-1.8 1.5.4.4 1.2-.6 2.2-1.3 2.2-1.5 0-.8-.5-.6-2.6 1.1zm-5 3c-1.8 1.4-1.8 1.5.4.4 1.2-.6 2.2-1.3 2.2-1.5 0-.8-.5-.6-2.6 1.1zm-7.6 4c-3.8 2-3.6 2.8.2.9 1.7-.9 3-1.8 3-2 0-.7-.1-.6-3.2 1.1z" />
             </svg>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            <h2 className="text-xl font-semibold text-center ">
               Next.js Integration
             </h2>
-          </section>
+          </DemoCard>
         </Link>
         <Link href={"/demos/orgs"}>
-          <section className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 flex flex-col items-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 ">
+          <DemoCard>
             <svg
-              className=" h-12 w-12 text-gray-700 dark:text-gray-300"
+              className="h-10 w-10 m-4 text-blue-500 dark:text-blue-300"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -50,15 +46,13 @@ export function DemosPageC() {
             >
               <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
             </svg>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-              Multi-tenancy
-            </h2>
-          </section>
+            <h2 className="text-xl font-semibold text-center">Multi-tenancy</h2>
+          </DemoCard>
         </Link>
         <Link href={"/demos/appearance"}>
-          <section className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 flex flex-col items-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 ">
+          <DemoCard>
             <svg
-              className=" h-12 w-12 text-gray-700 dark:text-gray-300"
+              className="h-10 w-10 m-4 text-blue-500 dark:text-blue-300"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -72,79 +66,130 @@ export function DemosPageC() {
               <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
               <circle cx="12" cy="12" r="3" />
             </svg>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            <h2 className="text-xl font-semibold text-center">
               UI Customization
             </h2>
-          </section>
+          </DemoCard>
         </Link>
         <Link href={"/demos/dashboard"}>
-          <section className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 flex flex-col items-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 ">
+          <DemoCard>
             <svg
-              className=" h-12 w-12 text-gray-700 dark:text-gray-300"
+              className="h-10 w-10 m-4 text-blue-500 dark:text-blue-300"
+              viewBox="0 0 84 100"
               fill="none"
-              height="24"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect height="9" rx="1" width="7" x="3" y="3" />
-              <rect height="5" rx="1" width="7" x="14" y="3" />
-              <rect height="9" rx="1" width="7" x="14" y="12" />
-              <rect height="5" rx="1" width="7" x="3" y="16" />
+              <g clip-path="url(#clip0_28400_184673)">
+                <path
+                  d="M79.65 13.17L67.6475 25.1723C67.2704 25.549 66.7775 25.7883 66.2483 25.8515C65.7187 25.9148 65.1837 25.7985 64.7283 25.5214C60.0071 22.6731 54.5621 21.2526 49.0508 21.4314C43.5396 21.6102 38.1983 23.3806 33.6714 26.5288C30.8873 28.4668 28.4698 30.8842 26.5319 33.6683C23.3874 38.198 21.6187 43.5396 21.4385 49.0508C21.2584 54.5621 22.6745 60.0079 25.5165 64.7333C25.7917 65.1879 25.9068 65.7213 25.8436 66.2492C25.7803 66.7767 25.5423 67.2679 25.1674 67.6446L13.1651 79.6467C12.9234 79.89 12.632 80.0783 12.3108 80.1983C11.9896 80.3188 11.6463 80.3679 11.3042 80.3433C10.9622 80.3183 10.6296 80.22 10.3292 80.0546C10.0287 79.8892 9.76758 79.6608 9.56362 79.385C3.0696 70.4588 -0.286495 59.6338 0.0191754 48.5996C0.324846 37.5653 4.27508 26.9427 11.2533 18.3898C13.3837 15.7729 15.7759 13.3806 18.3928 11.2503C26.9451 4.27392 37.5662 0.324843 48.5987 0.0191805C59.6312 -0.286482 70.4546 3.06847 79.38 9.56054C79.6579 9.76383 79.8879 10.0249 80.055 10.3258C80.2217 10.6266 80.3212 10.96 80.3471 11.3031C80.3729 11.6462 80.3237 11.9908 80.2033 12.313C80.0829 12.6353 79.8942 12.9277 79.65 13.17Z"
+                  fill="url(#paint0_linear_28400_184673)"
+                />
+                <path
+                  d="M79.6383 86.7874L67.6358 74.7849C67.2587 74.4082 66.7658 74.1691 66.2366 74.1057C65.7074 74.0424 65.172 74.1586 64.7166 74.4357C60.2649 77.1211 55.1645 78.5407 49.9658 78.5407C44.7666 78.5407 39.6663 77.1211 35.2146 74.4357C34.7592 74.1586 34.2239 74.0424 33.6946 74.1057C33.1652 74.1691 32.6725 74.4082 32.2953 74.7849L20.293 86.7874C20.0413 87.0291 19.8459 87.3236 19.7207 87.6495C19.5955 87.9753 19.5436 88.3249 19.5686 88.6732C19.5936 89.0216 19.6949 89.3599 19.8653 89.6645C20.0357 89.9695 20.2711 90.2328 20.5548 90.4361C29.0983 96.6524 39.3921 100.001 49.9579 100.001C60.5233 100.001 70.817 96.6524 79.3608 90.4361C79.6454 90.2341 79.882 89.9716 80.0541 89.6674C80.2258 89.3632 80.3287 89.0253 80.3554 88.677C80.3816 88.3286 80.3312 87.9786 80.2074 87.6524C80.0833 87.3257 79.8891 87.0303 79.6383 86.7874Z"
+                  fill="#1F0256"
+                />
+                <path
+                  d="M49.9901 64.2593C57.8759 64.2593 64.2692 57.8663 64.2692 49.9801C64.2692 42.0943 57.8759 35.7012 49.9901 35.7012C42.1038 35.7012 35.7109 42.0943 35.7109 49.9801C35.7109 57.8663 42.1038 64.2593 49.9901 64.2593Z"
+                  fill="#1F0256"
+                />
+              </g>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_28400_184673"
+                  x1="68.3696"
+                  y1="-7.32838"
+                  x2="-32.8531"
+                  y2="93.9021"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#17CCFC" />
+                  <stop offset="0.5" stop-color="#5D31FF" />
+                  <stop offset="1" stop-color="#F35AFF" />
+                </linearGradient>
+                <clipPath id="clip0_28400_184673">
+                  <rect width="83.3333" height="100" fill="white" />
+                </clipPath>
+              </defs>
             </svg>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+
+            <h2 className="text-xl font-semibold text-center">
               Clerk Dashboard
             </h2>
-          </section>
+          </DemoCard>
         </Link>
-        <section className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 flex flex-col items-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 ">
+        <DemoCard>
           <svg
-            className=" h-12 w-12 text-gray-700 dark:text-gray-300"
+            className="h-10 w-10 m-4"
+            viewBox="0 0 375 375"
             fill="none"
-            height="24"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="m8 6 4-4 4 4" />
-            <path d="M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22" />
-            <path d="m20 22-5-5" />
+            <path
+              d="M218.909 28.4831C218.909 21.5889 213.322 16 206.431 16C203.004 16 199.9 17.382 197.645 19.6192L195.912 21.548L99.675 151.658H195.18L218.429 32.0055L218.853 29.6682C218.89 29.2781 218.909 28.8828 218.909 28.4831Z"
+              fill="#3ECF8E"
+            />
+            <path
+              d="M65 205.336C65 216.366 73.9385 225.308 84.9647 225.308L85.053 225.308H180.87L195.18 151.658H99.675L70.736 190.783L68.8725 193.512C66.4382 196.822 65 200.911 65 205.336Z"
+              fill="#3ECF8E"
+            />
+            <path
+              d="M310 171.631C310 160.6 301.061 151.658 290.035 151.658H289.245H195.18L180.87 225.308H275.202L305.604 184.205L306.817 182.455C308.831 179.337 310 175.62 310 171.631Z"
+              fill="#3ECF8E"
+            />
+            <path
+              d="M157.533 346.517C157.533 353.411 163.119 359 170.011 359C173.706 359 177.027 357.393 179.311 354.839L179.803 354.285L275.202 225.308H180.87L157.985 343.089L157.924 343.405C157.668 344.4 157.533 345.443 157.533 346.517Z"
+              fill="#3ECF8E"
+            />
+            <path
+              d="M157.533 346.517C157.533 353.411 163.119 359 170.011 359C173.706 359 177.027 357.393 179.311 354.839L179.803 354.285L275.202 225.308H180.87L157.985 343.089L157.924 343.405C157.668 344.4 157.533 345.443 157.533 346.517Z"
+              fill="url(#paint0_linear)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear"
+                x1="236"
+                y1="237"
+                x2="167"
+                y2="359"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#23915F" />
+                <stop offset="1" stop-color="#3ECF8E" stop-opacity="0" />
+              </linearGradient>
+            </defs>
           </svg>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+
+          <h2 className="text-xl font-semibold text-center">
             Supabase Integration
           </h2>
-        </section>
+        </DemoCard>
         <Link href={"/demos/edge"}>
-          <section className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 flex flex-col items-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 ">
+          <DemoCard>
             <svg
-              className=" h-12 w-12 text-gray-700 dark:text-gray-300"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width="24"
               xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 49"
+              className="h-10 w-10 m-4 text-[#f3801f]"
+              // stroke="currentColor"
+              fill="currentColor"
             >
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              <path d="m18.63 37.418-9.645-12.9 9.592-12.533-1.852-2.527L5.917 23.595l-.015 1.808 10.86 14.542 1.868-2.527z"></path>
+              <path d="M21.997 6.503h-3.712l13.387 18.3-13.072 17.7h3.735L35.4 24.81 21.997 6.503z"></path>
+              <path d="M29.175 6.503h-3.758l13.598 18.082-13.598 17.918h3.765l12.908-17.01v-1.808L29.175 6.503z"></path>
             </svg>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-              Edge Auth
+            <h2 className="grow text-xl font-semibold text-center">
+              Edge Authentication
             </h2>
-          </section>
+          </DemoCard>
         </Link>
       </div>
     </>
+  );
+}
+
+function DemoCard(props: PropsWithChildren<{ disabled?: boolean }>) {
+  return (
+    <section className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 flex flex-col items-center transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-gray-900 dark:text-white h-full">
+      {props.children}
+    </section>
   );
 }

@@ -59,7 +59,7 @@ export function NextjsDemoC(props: {
         <div className="flex space-x-2">
           <Link href="/demos/nextjs">
             <Button
-              className="w-full md:w-auto text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="w-full md:w-auto text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-800 hover:text-white"
               variant="outline"
             >
               App
@@ -67,7 +67,7 @@ export function NextjsDemoC(props: {
           </Link>
           <Link href="/pages/demos/nextjs">
             <Button
-              className="w-full md:w-auto text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="w-full md:w-auto text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-800 hover:text-white"
               variant="outline"
             >
               Pages
@@ -75,7 +75,7 @@ export function NextjsDemoC(props: {
           </Link>
           <Link href="/demos/nextjs/client">
             <Button
-              className="w-full md:w-auto text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="w-full md:w-auto text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-800 hover:text-white"
               variant="outline"
             >
               Client
